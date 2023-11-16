@@ -1,0 +1,339 @@
+*,
+  button,
+  input {
+    font-family: Arial, sans-serif;
+  }
+
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    --nav-itam : linear-gradient(to top, #efefef, #ffffff);
+    --nav-itam-samping : linear-gradient(to top, #efefef, #ffffff);
+    --segitiga : #3498db;
+    --text : black;
+    --text_span : #0515cc;
+    --primary: white;
+    --buton : linear-gradient(to top, #3498db, #0515cc);
+    --buton2 : linear-gradient(to top, #3498db, #0515cc);
+    --sb-track-color: #232E33;
+    --sb-thumb-color: #3fc7c6;
+    --sb-size: 10px;
+  
+    scrollbar-color: var(--sb-thumb-color) 
+                     var(--sb-track-color);
+  }
+  
+  body::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 2px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 2px;
+  }
+
+.dark{
+--nav-itam : linear-gradient(to top, #2e3132, #060606);
+--nav-itam-samping : linear-gradient(to bottom, #2e3132, #060606);
+--segitiga : black;
+--text : white;
+--primary :black;
+--text_span : #e63946;
+--buton : linear-gradient(to top, #2e3132, #060606);
+--buton2 : linear-gradient(to top, #f94949, #7d0000);
+}
+
+
+.header img{
+  width: 100px;
+  height: 100px;
+}
+
+.header h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+
+.body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background: var(--nav-itam);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+  padding: 10px 20px;
+}
+
+.header img {
+  width: 65px;
+  height: 65px;
+}
+
+.header h3 {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.header .navbar {
+  display: flex;
+  align-items: center;
+}
+
+.header .navbar input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+  width: 250px;
+  margin-right: 10px;
+}
+
+.header .navbar button.search-button {
+  background: var(--buton2);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 8px 12px;
+  margin-right: 300px;
+}
+
+.header .navbar a {
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--text);
+  font-weight: 700;
+  margin: 0 10px;
+  display: inline-block;
+  align-items: center;
+  position: relative;
+  transition: color 0.3s ease;
+  justify-content: center;
+}
+
+.header .navbar a:hover {
+  color: rgb(18, 12, 31);
+  transition: all .2s ease-in-out;
+  transform: translateX(2px);
+}
+
+.header .navbar a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #e63946;
+  transform: scaleX(0);
+}
+
+
+.header .navbar a:hover::after {
+  transform: scaleX(1);
+}
+
+.header .navbar button.login {
+  color: #fff;
+  background: var(--buton2);
+  padding: 8px 12px;
+  border: none;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+
+.header .navbar button.login:hover{
+  background-color: #3498db;
+  transition: 0.5s ease-in-out;
+}
+
+.header .navbar button.signup {
+  background: #efefef;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 24px;
+}
+
+.header .navbar-extra a {
+  color: wheat;
+  margin: 0 10px;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background: var(--buton);
+  width: 70px;
+  height: 30px;
+  border-radius: 50px;
+  position: relative;
+  padding: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-self: center;
+}
+
+.fa-moon {color: #3498db;}
+
+.fa-sun {color: #0515cc;}
+
+.checkbox-label .ball {
+  background-color: wheat ;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  right: 4px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(38px);
+}
+  
+#menu {
+  display: none;
+}
+
+
+header h1{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+section {
+    max-width: 800px;
+    /* margin-top:px; */
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+section h2{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.content {
+    padding: 20px;
+    margin: 20px 20px 20px 20px; /* Adjusted margins to ensure spacing */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content h2 {
+    color: #000000;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.content p{
+    color: #000000;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: justify;
+}
+
+.card {
+    border: 1px solid #a29d9d;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-top: 2px;
+    padding: 20px;
+    width: calc(30% - 20px);
+    box-sizing: border-box;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+}
+
+.card img {
+    border-radius: 30px;
+    margin-bottom: 10px;
+    width: 250px;
+    align-self: center; /* Center the image within the card */
+}
+
+.card-a {
+    border: 1px solid #a29d9d;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin: 30px auto;
+    padding: 20px;
+    width: calc(30% - 20px);
+    box-sizing: border-box;
+    background: linear-gradient(45deg, #1a4288, #68deff);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+}
+
+.card-a img{
+    border-radius: 30px;
+    margin-bottom: 10px;
+    width: 250px;
+    align-self: center;
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-content h3 {
+    margin: 0;
+    color: #000000;
+    text-align: center;
+}
+
+.card-content p {
+    color: #000000;
+    text-align: left;
+}
+
+footer {
+    background: var(--nav-itam-samping);
+    margin-top: auto;
+    margin-bottom: 2px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
