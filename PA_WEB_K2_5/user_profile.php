@@ -706,7 +706,7 @@ main {
 
 <body>
   <nav class="header" id="header">
-    <img src="assets/logo-P-removebg-preview.png" alt="Logo">
+    <img src="assets/logooo.png" alt="Logo">
     <h3 span style="color:var(--text);">Pinter<span style="color: var(--text_span);">1st</span></h3>
     <div class="navbar">
       <input type="text" placeholder="Search" id="search">
